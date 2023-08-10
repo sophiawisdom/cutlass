@@ -155,7 +155,7 @@ class Gemm(OperationBase):
         # A, B, C, and D are row-major torch.Tensor objects of type torch.float32
         Gemm(A=A, B=B, C=C, D=D)
 
-        # Use the generic ``element`` and explicitly specify the layouts to use for A, B, and C (layout of D is
+        # Use the generic ``element`` and explicitly specify the layouts to use for A, B, and C (layout of C is
         # the same as that for D, at present)
         Gemm(element=cutlass.DataType.f32, layout_A=cutlass.LayoutType.RowMajor,
             layout_B=cutlass.LayoutType.RowMajor, layout_C=cutlass.LayoutType.RowMajor)
